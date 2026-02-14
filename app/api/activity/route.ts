@@ -1,5 +1,4 @@
 // @ts-nocheck
-export const dynamic = "force-dynamic";
 import { NextResponse } from 'next/server';
 
 const ACTIVITY_LOG: any[] = [];
