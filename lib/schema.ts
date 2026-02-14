@@ -65,8 +65,8 @@ export const verificationTokens = pgTable('verification_tokens', {
 export const subscriptions = pgTable('subscriptions', {
   id: text('id').primaryKey(), // Stripe subscription ID
   userId: text('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
-  stripeCustomerId: text('stripe_customer_id').notNull(),
-  stripePriceId: text('stripe_price_id').notNull(),
+  stripeCustomerId: text('stripe_customer_id'),
+  stripePriceId: text('stripe_price_id'),
   status: text('status').notNull().default('incomplete'),
   currentPeriodStart: timestamp('current_period_start'),
   currentPeriodEnd: timestamp('current_period_end'),
